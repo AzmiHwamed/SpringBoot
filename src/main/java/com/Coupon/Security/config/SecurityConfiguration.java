@@ -44,8 +44,11 @@ public class SecurityConfiguration {
                 .permitAll()
                 .requestMatchers("/admin/**")
                 .hasAuthority(ADMIN.name())
+                .requestMatchers("/swagger-ui/**","/v3/api-docs") // Permit access to Swagger UI
+                .permitAll()
                 .anyRequest()
                 .authenticated()
+
                 .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)

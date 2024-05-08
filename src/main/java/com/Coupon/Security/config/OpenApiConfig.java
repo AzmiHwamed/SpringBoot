@@ -19,7 +19,7 @@ import jdk.jfr.Description;
                 ),
                 description ="OpenApi documentation for Spring Issatc Service",
                 title = "OpenApi specification",
-                version = "1.0"
+                version = "3.1.0"
         ),
         servers = {
                 @Server(
